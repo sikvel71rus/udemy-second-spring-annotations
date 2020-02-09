@@ -12,10 +12,15 @@ public class AnnotationDemoApp {
 
         //get the bean from spring container
         Coach theCoach = context.getBean("tennisCoach", Coach.class);
-        ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
-        String[] beanDefinitionNames = context.getBeanDefinitionNames();
-        //call a method on the bean
+
+
+
+        //call a method on the beans
         System.out.println(theCoach.getDailyWorkout());
+
+        //call method to get daily fortune
+
+        System.out.println(theCoach.getDailyFortune());
 
         //close the context
         context.close();
